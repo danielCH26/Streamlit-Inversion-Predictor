@@ -29,12 +29,12 @@ def remove_outliers(X):
 
 #Cargamos el pipeline con el modelo
 import pickle
-filename = '/content/drive/MyDrive/Colab Notebooks/UPB/SM5/Mineria/pipeline_modelo.pkl'
+filename = 'pipeline_modelo.pkl'
 pipeline = pickle.load(open(filename, 'rb'))
 pipeline
 
 #Cargamos los datos futuros
-data = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/UPB/SM5/Mineria/videojuegos-datosFuturos.csv")
+data = pd.read_csv("videojuegos-datosFuturos.csv")
 data.head()
 
 #Hacemos la predicción con el Tree
