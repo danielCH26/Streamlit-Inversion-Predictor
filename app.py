@@ -37,12 +37,6 @@ pipeline = pickle.load(open(filename, 'rb'))
 #data = pd.read_csv("videojuegos-datosFuturos.csv")
 #data.head()
 
-#Hacemos la predicción con el Tree
-Y_Tree = pipeline.predict(data)
-print(Y_Tree)
-
-data['Prediccion']=Y_Tree
-data
 
 #Streamlit
 
@@ -57,3 +51,11 @@ videojuego = st.selectbox('Videojuego', ["'Mass Effect'","'Battlefield'", "'Fifa
 Plataforma = st.selectbox('Plataforma', ["'Play Station'", "'Xbox'","PC","Otros"])
 Sexo = st.selectbox('Sexo', ['Hombre', 'Mujer'])
 Consumidor_habitual = st.selectbox('Consumidor_habitual', ['True', 'False'])
+
+
+#Hacemos la predicción con el Tree
+Y_Tree = pipeline.predict(data)
+print(Y_Tree)
+
+data['Prediccion']=Y_Tree
+data
