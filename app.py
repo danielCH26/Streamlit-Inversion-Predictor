@@ -52,6 +52,10 @@ Plataforma = st.selectbox('Plataforma', ["'Play Station'", "'Xbox'","PC","Otros"
 Sexo = st.selectbox('Sexo', ['Hombre', 'Mujer'])
 Consumidor_habitual = st.selectbox('Consumidor_habitual', ['True', 'False'])
 
+#Dataframe
+datos = [[Edad, videojuego,Plataforma,Sexo,Consumidor_habitual]]
+data = pd.DataFrame(datos, columns=['Edad', 'videojuego','Plataforma','Sexo','Consumidor_habitual']) #Dataframe con los mismos nombres de variable
+
 
 #Hacemos la predicción con el Tree
 Y_Tree = pipeline.predict(data)
